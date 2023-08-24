@@ -2,7 +2,7 @@
 export default {
   name: "SearchBar",
   props: {
-    addMarkers: Function,
+    addLocations: Function,
     addedDestinations: Array
     // addedDestinations: Array
   },
@@ -43,7 +43,7 @@ export default {
   <div class="search-wrapper">
     <input type="text" v-model="search" placeholder="Search title.." />
     <ul>
-      <li v-for="location in filteredLocations" class="list_item" @click="addMarkers(JSON.stringify(location))">
+      <li v-for="location in filteredLocations" class="list_item" @click="addLocations(JSON.stringify(location))">
         {{ location.name }} - {{ location.lat }}
       </li>
     </ul>

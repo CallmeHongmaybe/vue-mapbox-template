@@ -3,7 +3,7 @@
     <div id="mapContainer" class="basemap"></div>
     <div class="rightpane">
       <button @click="toggleMarkers()">{{ !!markers.length ? 'Hide markers' : 'Show markers' }}</button>
-      <SearchBar :addMarkers="addMarkers" :addedDestinations="destinations" />
+      <SearchBar :addLocations="addLocations" :addedDestinations="destinations" />
       <div>
         <strong>List of destinations</strong>
         <ul>
@@ -54,6 +54,10 @@ export default {
 
       // setting up markers
       this.toggleMarkers()
+    },
+    addLocations(location) {
+      this.destinations = this.destinations.concat(JSON.parse(location))
+      this.addMarkers(location)
     },
     addMarkers(location) {
       let { name, lon, lat } = JSON.parse(location)
