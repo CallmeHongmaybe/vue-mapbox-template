@@ -1,4 +1,4 @@
-# road-trip-planner
+# vue-mapbox-template
 
 This template comes with Mapbox JS packaged with Vue that allows you to control map events and markers seamlessly, along with authentication and storage services from Firebase.
 
