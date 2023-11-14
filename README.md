@@ -1,6 +1,6 @@
 # road-trip-planner
 
-This template should help get you started developing with Vue 3 in Vite.
+This template comes with Mapbox JS packaged with Vue that allows you to control map events and markers seamlessly, along with authentication and storage services from Firebase.
 
 ## Recommended IDE Setup
 
